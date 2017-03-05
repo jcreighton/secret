@@ -1,0 +1,167 @@
+/* Styles */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  font-family: helvetica, sans-serif;
+  background-color: #eff5f9;
+  color: #698faf;
+  font-size: 16px;
+  display: table;
+  width: 100%;
+}
+
+header{
+  background-color: #23495C;
+  padding: 10px;
+}
+
+h1{
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #698faf;
+  background-color: rgba(195, 198, 200, .5);
+  padding: 20px;
+  margin: 0;
+}
+
+h1.minibeat-header{
+  color: #fff;
+  font-size: 30px;
+  background-color: transparent;
+}
+
+h1.content-header{
+  color: #23495C;
+  background-color: transparent;
+  text-align: center;
+}
+
+main{
+  width: 1400px;
+  margin: 0 auto 30px auto;
+  overflow: auto;
+}
+
+/* Lists */
+
+.articles, .details{
+  display: inline-block;
+  vertical-align: top;
+  width: 680px;
+}
+
+.articles ul, .details ul{
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.articles ul li, .details ul li{
+  position: relative;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.articles ul li{
+  cursor: pointer;
+}
+
+.articles ul li span, .details ul li span{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.articles ul li span:last-child{
+  width: 500px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.articles ul li span:first-child, .details ul li span:first-child{
+  background-color: #49B8B2;
+  color: #fff;
+  font-weight: bold;
+  width: 40px;
+  text-align: center;
+  padding: 10px;
+  margin-right: 20px;
+  transition: background-color .3s ease-out;
+}
+
+.articles ul li span:last-child, .details ul li span:last-child{
+  padding-top: 10px;
+}
+
+.details h1{
+  color: #698faf;
+  background-color: rgba(195, 198, 200, .5);
+  padding: 20px;
+}
+
+.details ul li span:first-child{
+  background-color: #d14639;
+}
+
+/* List Item Hover States */
+
+.articles ul li:hover{
+  background-color: #49B8B2;
+  color: #fff;
+}
+
+.articles ul li:hover span:first-child{
+  background-color: #fff;
+  color: #23495C;
+}
+
+.articles ul li:hover:before{
+  border-bottom-color: #e6e6e6;
+  border-width: 10px;
+  right: 0px;
+}
+
+.articles ul li:hover:before, .articles ul li:hover:after{
+  bottom: 100%;
+  border: solid transparent;
+  content: " ";
+  position: absolute;
+  top: 9px;
+  z-index: 17;
+}
+
+.articles ul li:hover:after{
+  border-color: rgba(0,0,0,0);
+  border-left-color: #23495C;
+  border-width: 9px;
+  right: 1px;
+}
+
+/* Error State */
+
+.error{
+  background-color: #d14639;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+footer{
+  display: table-row;
+  height: 40px;
+  background-color: #b39dc2;
+}
+
+footer span{
+  color: #fff;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 10px;
+}
